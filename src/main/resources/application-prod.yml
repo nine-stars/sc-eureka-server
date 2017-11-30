@@ -1,0 +1,20 @@
+server:
+  port: 8761
+
+security:
+  basic:
+    enabled: true
+  user:
+    name: user
+    password: password
+    
+eureka:
+  server:
+    enable-self-preservation: false
+  client:
+    healthcheck:
+      enabled: true
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://user:password@139.196.58.18:8761/eureka/
